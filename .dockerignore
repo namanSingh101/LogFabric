@@ -8,7 +8,7 @@ venv/
 **/*.pyo 
 *.egg-info/
 
-# Environment variables
+#Environment variables
 .env
 .env.*
 
@@ -16,18 +16,24 @@ venv/
 docker_compose_server.sh
 run_server.sh
 
-#Editor 
+#Git
+.git/
+.gitignore
+
+# IDE / Editor
 .vscode/
 .idea/
-*.iml
 
-#OS
+# OS
 .DS_Store
 Thumbs.db
 
 #Logs
 *.log
 
-*.pem
-*.key
-secrets/
+#Docker
+.dockerignore
+docker-compose*.yml 
+
+# Docs / README
+README.md

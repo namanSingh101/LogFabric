@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logfabric-cicd
+  labels:
+    project: logfabric
+    tier: cicd
+    managed-by: kubectl
+  annotations:
+    description: "CI/CD pipelines and build infrastructure (ArgoCD, Tekton)"

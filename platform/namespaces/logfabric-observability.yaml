@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata: 
+  name: logfabric-observability
+  labels: 
+    project: logfabric 
+    tier: observability
+    managed-by: kubectl
+  annotations:
+    description: "Monitoring, logging, and tracing (Prometheus, Grafana, Loki, Jaeger)"

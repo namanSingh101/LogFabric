@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logfabric-data
+  labels:
+    project: logfabric
+    tier: data
+    managed-by: kubectl
+  annotations:
+    description: "Databases, caches, and persistent storage (Postgres, Redis, S3)"

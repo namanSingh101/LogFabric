@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logfabric-messaging 
+  labels: 
+    project: logfabric
+    tier: messaging 
+    managed-by: kubectl
+  annotations:
+    description: "Message brokers and event streaming (Kafka, RabbitMQ, NATS)"
