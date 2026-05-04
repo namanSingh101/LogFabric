@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logfabric-app
+  labels: 
+    project: logfabric
+    tier: app
+    managed-by: kubectl
+  annotations: 
+    description: "User -facing applications microservices"
