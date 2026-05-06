@@ -10,8 +10,9 @@ resources:
   - ../../base
 
 images:
-  - name: doc105b/postgres-custom
-    newTag: latest
+  - name: logfabric/postgres-custom
+    newName: logfabric/postgres-custom
+    newTag: "1.0"
 
 secretGenerator:
 - name: postgres-secret
@@ -27,3 +28,5 @@ configMapGenerator:
       - POSTGRES_HOST=postgres.logfabric-data.svc.cluster.local
       - POSTGRES_PORT=5432
       - PGDATA=/var/lib/postgresql/data/pgdata 
+    options:
+      disableNameSuffixHash: true

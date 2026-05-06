@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+
+build:
+  local:
+    push: false
+  artifacts:
+    - image: logfabric/postgres-custom
+      context: apps/postgres
+      docker:
+        dockerfile: image/Dockerfile.postgres
+        noCache: false
+        pullParent: false
+        squash: false
+
+manifests:
+  kustomize:
+    paths:
+      - environments/local

@@ -1,0 +1,21 @@
+# Regular ClusterIP service for application access
+# This load-balances reads across all replicas
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  namespace: logfabric-data
+  labels:
+    app: postgres
+    project: logfabric
+    tier: data 
+    component: postgres
+spec:
+  type: ClusterIP
+  selector:
+    app: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: 5432
+      protocol: TCP
