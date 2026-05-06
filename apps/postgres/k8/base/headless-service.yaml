@@ -1,0 +1,26 @@
+# headless-service.yaml
+
+# Headless service for a PostgreSQL StatefulSet
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-headless
+  namespace: logfabric-data
+  labels:
+    app: postgres
+    project: logfabric
+    tier: data
+    component: postgres
+spec:
+  # This makes it a headless service
+  clusterIP: None
+  selector:
+    app: postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: 5432
+      protocol: TCP
+  # publishNotReadyAddresses includes pods that are not yet ready
+  # Useful during initial bootstrapping of stateful clusters
+  publishNotReadyAddresses: true

@@ -10,8 +10,7 @@ venv/
 
 # Environment variables
 .env
-.env.*
-*.env
+*.env.*
 
 #Scripts
 docker_compose_server.sh

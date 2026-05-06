@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../../platform/namespaces
+  - ../../apps/postgres/k8/overlays/local
